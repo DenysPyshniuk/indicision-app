@@ -2,7 +2,27 @@ console.log('App is running');
 
 // JSX - JavaScript XML
 
-var template = <h1>Did this change?</h1>;
-var appRoot = document.getElementById('app');
+var template = (
 
-ReactDOM.render(template, appRoot);
+        <div>
+          <h1>Indecision App</h1>
+          <p>This is some info</p>
+          <ol>
+            <li>Item one</li>
+            <li>Item two</li>
+          </ol>
+        </div>
+          );
+
+var templateTwo = (
+  <div>
+    <h1>Denys Pyshniuk</h1>
+    <p>Age: 26</p>
+    <p>Location: North Vancouver</p>
+  </div>
+)
+
+
+        var appRoot = document.getElementById('app');
+
+        ReactDOM.render(templateTwo, appRoot);
