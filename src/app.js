@@ -36,13 +36,11 @@ const renderFormApp = () => {
     <div>
       <h1>{app.title}</h1>
       {app.subtitle && <p>{app.subtitle}</p>}
-
-      <button onClick={onMakeDecision}>What should I do?</button>
-
       <form onSubmit={onFormSubmit}>
         <input type="text" name="option" />
         <button>Add Option</button>
       </form>
+      <button disabled={app.options.length === 0} onClick={onMakeDecision}>What should I do?</button>
       <ol>
         {
           app.options.map(
