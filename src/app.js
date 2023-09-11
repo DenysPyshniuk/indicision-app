@@ -43,7 +43,11 @@ const renderFormApp = () => {
           : "You don't have any options yet"}
       </p>
       <ol>
-        <li>options...</li>
+        {
+          app.options.map(
+            (option) => <li key={option}>{option}</li>
+          )
+        }
       </ol>
       <button onClick={removeOptions}>Remove all options</button>
     </div>
